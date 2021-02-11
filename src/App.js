@@ -5,15 +5,18 @@ import ContactForm from './Components/ContactForm/ContactForm';
 import ContactList from './Components/ContactList/ContactList';
 import Filter from './Components/Filter/Filter';
 import contactOperations from './Redux/contact/operations/contactOperations';
+import authOperations from './Redux/auth/operations/authOperations';
 import selectors from './Redux/contact/selectors';
 import styles from './App.module.css';
 import Registration from './Components/Registration/Registration';
 import Login from './Components/Login/Login';
+import UserMenu from './Components/UserMenu/UserMenu';
 
 class App extends Component {
   componentDidMount() {
     this.props.onFetchContacts();
   }
+
   render() {
     const { contacts } = this.props;
     return (
@@ -30,6 +33,7 @@ class App extends Component {
         <ContactList />
         <Registration />
         <Login />
+        <UserMenu />
       </div>
     );
   }

@@ -34,4 +34,30 @@ const logIn = records => dispatch => {
     .catch(error => dispatch(authActions.loginError(error)));
 };
 
-export default { register, logIn };
+const logOut = () => dispatch => {
+  dispatch(authActions.logoutRequest());
+  axios
+    .post('/users/logout')
+    .then(() => {
+      token.unset();
+      dispatch(authActions.logoutSuccess());
+    })
+    .catch(error => dispatch(authActions.logoutError(error)));
+};
+
+// const getCurrentUser = () => (dispatch, getState) => {
+//   const {
+//     auth: { token: persistedToken },
+//   } = getState();
+//   if (!persistedToken) {
+//     return;
+//   }
+//   token.set(persistedToken);
+//   dispatch(authActions.getCurrentUserRequest());
+//   axios
+//     .get('/users/current')
+//     .then(({ data }) => dispatch(authActions.getCurrentUserSuccess(data)))
+//     .catch(error => authActions.getCurrentUserError(error));
+// };
+
+export default { register, logIn, logOut, getCurrentUser };
