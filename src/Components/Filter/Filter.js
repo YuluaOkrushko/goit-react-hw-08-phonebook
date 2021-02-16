@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 
 const Filter = ({ value, onFilter }) => (
   <div className={styles.wrapper}>
-    <p className={styles.title}>Find contact</p>
+    <h3 className={styles.title}>Find contact</h3>
     <input
       className={styles.input}
       type="text"

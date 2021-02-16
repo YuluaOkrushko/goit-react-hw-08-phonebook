@@ -13,23 +13,46 @@ class ContactList extends Component {
   render() {
     const { contacts } = this.props;
     return (
-      <TransitionGroup component="ul" className={styles.item}>
+      <TransitionGroup component="ul">
         {contacts.map(item => (
           <CSSTransition key={item.id} timeout={250} classNames={styles}>
-            <li className={styles.list}>
-              {item.name} : {item.number}
-              <button
-                className={styles.button}
-                id={item.id}
-                onClick={this.handleDeleteContact(item.id)}
-              >
-                Delete
-              </button>
+            <li>
+              <div className={styles.wrapper}>
+                <div className={styles.container}>
+                  <span className={styles.telName}>{item.name}</span>
+                  <span className={styles.telNumber}>{item.number}</span>
+                  <button
+                    className={styles.button}
+                    id={item.id}
+                    onClick={this.handleDeleteContact(item.id)}
+                  >
+                    Delete
+                  </button>
+                </div>
+              </div>
             </li>
           </CSSTransition>
         ))}
       </TransitionGroup>
     );
+    // return (
+    //   <TransitionGroup component="ul" className={styles.item}>
+    //     {contacts.map(item => (
+    //       <CSSTransition key={item.id} timeout={250} classNames={styles}>
+    //         <li className={styles.list}>
+    //           {item.name} : {item.number}
+    //           <button
+    //             className={styles.button}
+    //             id={item.id}
+    //             onClick={this.handleDeleteContact(item.id)}
+    //           >
+    //             Delete
+    //           </button>
+    //         </li>
+    //       </CSSTransition>
+    //     ))}
+    //   </TransitionGroup>
+    // );
   }
 }
 

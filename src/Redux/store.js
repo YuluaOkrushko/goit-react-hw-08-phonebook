@@ -3,7 +3,7 @@ import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import contactsReducers from './contact/reduser/contactRedusers';
 import filterReducers from './contact/reduser/filterReducers';
-import authReducer from './auth/reduser/authReducer';
+import authReducer from './auth/authReducer';
 
 const defaultMiddleware = getDefaultMiddleware({
   serializableCheck: false,

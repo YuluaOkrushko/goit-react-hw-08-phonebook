@@ -48,8 +48,8 @@ class ContactForm extends Component {
   render() {
     const { name, number, isExist, duplicateContact } = this.state;
     return (
-      <div>
-        <div>
+      <div className={styles.upperWrapper}>
+        <div className={styles.headWrapper}>
           <CSSTransition
             in={true}
             appear={true}
@@ -57,7 +57,7 @@ class ContactForm extends Component {
             classNames={styles}
             unmountOnExit
           >
-            <h1 className={styles.title_phonebook}>Phonebook</h1>
+            <h1 className={styles.title}>Phonebook</h1>
           </CSSTransition>
           <CSSTransition
             in={isExist}

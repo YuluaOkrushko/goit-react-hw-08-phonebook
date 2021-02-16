@@ -1,39 +1,53 @@
-.wrapper {
+.upperWrapper{
+  background-color: rgba(147, 150, 150, 0.6);
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0px 0px 19px 6px rgba(147, 150, 150, 0.23);
+}
+.headWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.title {
+  font-size: 36px;
+  color: rgb(246, 234, 236);
+  margin: 0;
+  padding: 0 156px;
+  margin-bottom: 20px;
+}
+.title_item {
+  color: rgb(246, 234, 236);
+}
+.button_wrapper {
+  text-align: center;
+  margin-top: 14px;
+}
+.button {
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
+  height: 30px;
+  width: 110px;
+  background-color: rgb(246, 234, 236);
+  box-shadow: 0px 0px 19px 6px rgba(246, 234, 236, 0.23);
+}
+  .wrapper {
     flex-direction: column;
     text-align: center;
     display: flex;
   }
-  .title {
-    text-align: center;
-    color: rgb(244, 164, 96);
-  }
-  .title_phonebook {
-    text-align: center;
-    color: rgb(244, 164, 96);
-  }
+
   .input {
     height: 20px;
     text-align: center;
-    outline: rgb(139, 69, 19);
+    outline: none;
     width: 250px;
     margin: 0 auto;
   }
-  .button_wrapper {
-    text-align: center;
-    margin-top: 14px;
-  }
-  .button {
-    border: none;
-    border-radius: 3px;
-    outline: none;
-    cursor: pointer;
-    height: 30px;
-    width: 110px;
-    background-color: rgb(255, 235, 205);
-  }
-  .title_item {
-    color: rgb(139, 69, 19);
-  }
+
 /* -----phonebook animation------------ */
   .appear{
   transform: translateX(-100%);

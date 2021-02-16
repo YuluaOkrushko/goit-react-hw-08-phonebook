@@ -1,9 +1,27 @@
-.item {
-    list-style: none;
-    padding: 0 0 20px;
+  ul{
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: rgba(147, 150, 150, 0.6);
+    padding: 14px;
+    box-shadow: 0px 0px 19px 6px rgba(147, 150, 150, 0.23);
+    width: 542px;
   }
   .list {
-    text-align: center;
+    list-style: none;
+  }
+  .telNumber {
+    margin-left: 18%;
+    margin-right: 25px;
+    color: rgb(246, 234, 236);
+  }
+  .telName{
+    color: rgb(246, 234, 236);
+  }
+  .container {
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
   }
   .button {
     border: none;
@@ -11,10 +29,12 @@
     outline: none;
     cursor: pointer;
     height: 30px;
-    width: 110px;
-    background-color: rgb(255, 235, 205);
+    width: 75px;
+    background-color: rgb(246, 234, 236);
+    box-shadow: 0px 0px 19px 6px rgb(246 234 236 / 23%);
     margin: 5px;
   }
+  /* Animation */
   .enter {
     transform: translateX(-100%);
   }

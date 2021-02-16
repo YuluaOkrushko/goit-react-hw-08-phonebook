@@ -1,0 +1,19 @@
+.registerPageWrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("https://i.ibb.co/4Srzm1Q/coffee-cup-shutterstock-264132746.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.registerPageContainer {
+  color: whitesmoke;
+  width: 30%;
+  padding: 30px;
+  border: 1px solid white;
+  background: rgba(0, 0, 0, 0.5);
+}

@@ -2,13 +2,20 @@
     flex-direction: column;
     text-align: center;
     display: flex;
-  }
-  .title {
-    color: rgb(139, 69, 19);
+    background-color: rgba(147, 150, 150, 0.6);
+    padding: 14px;
+    box-shadow: 0px 0px 19px 6px rgba(147, 150, 150, 0.23);
   }
   .input {
     text-align: center;
-    outline: rgb(139, 69, 19);
+    outline: none;
     width: 250px;
     margin: 0 auto;
+  }
+  .title{
+    font-size: 36px;
+    color: rgb(246, 234, 236);
+    margin: 0;
+    padding: 0 156px;
+    margin-bottom: 20px;
   }
