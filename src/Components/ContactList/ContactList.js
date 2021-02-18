@@ -35,24 +35,6 @@ class ContactList extends Component {
         ))}
       </TransitionGroup>
     );
-    // return (
-    //   <TransitionGroup component="ul" className={styles.item}>
-    //     {contacts.map(item => (
-    //       <CSSTransition key={item.id} timeout={250} classNames={styles}>
-    //         <li className={styles.list}>
-    //           {item.name} : {item.number}
-    //           <button
-    //             className={styles.button}
-    //             id={item.id}
-    //             onClick={this.handleDeleteContact(item.id)}
-    //           >
-    //             Delete
-    //           </button>
-    //         </li>
-    //       </CSSTransition>
-    //     ))}
-    //   </TransitionGroup>
-    // );
   }
 }
 

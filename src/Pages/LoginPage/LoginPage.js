@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import withAuthRedirect from '../../Common/hoc/withAuthRedirect';
+// import withAuthRedirect from '../../Common/hoc/withAuthRedirect';
 import { authOperations } from '../../Redux/auth';
 import './LoginPage.css';
 
@@ -65,11 +65,4 @@ class LoginPage extends Component {
   }
 }
 
-const mapDispatchToProps = {
-  onLogin: authOperations.logIn,
-};
-
-export default compose(
-  withAuthRedirect,
-  connect(null, mapDispatchToProps),
-)(LoginPage);
+export default connect(null, { onLogin: authOperations.logIn })(LoginPage);

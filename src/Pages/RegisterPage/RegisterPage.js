@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { Form, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { authOperations } from '../../Redux/auth';
-import withAuthRedirect from '../../Common/hoc/withAuthRedirect';
+// import withAuthRedirect from '../../Common/hoc/withAuthRedirect';
 import './RegisterPage.css';
 
 class RegisterPage extends Component {
@@ -17,9 +17,6 @@ class RegisterPage extends Component {
     this.setState({ [name]: value });
   };
 
-  // handleChange = e => {
-  //   this.setState({ [e.target.name]: e.target.name });
-  // };
   handleSubmit = e => {
     e.preventDefault();
     this.props.onRegister({ ...this.state });
@@ -75,11 +72,6 @@ class RegisterPage extends Component {
   }
 }
 
-const mapDispatchToProps = dispatch => ({
-  onRegister: records => dispatch(authOperations.register(records)),
-});
-
-export default compose(
-  withAuthRedirect,
-  connect(null, mapDispatchToProps),
-)(RegisterPage);
+export default connect(null, { onRegister: authOperations.register })(
+  RegisterPage,
+);
